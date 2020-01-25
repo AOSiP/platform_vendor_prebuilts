@@ -6,6 +6,7 @@ PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/prebuilts/overlay
 
 # Extra packages
 PRODUCT_PACKAGES += \
+    PixelLauncherOverlay \
     PixelSetupWizardOverlay
 
 # Setup Wizard props
