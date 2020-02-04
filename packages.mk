@@ -6,6 +6,9 @@ PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/prebuilts/overlay
 
 $(call inherit-product, vendor/gapps/common/common-vendor.mk)
 
+PRODUCT_COPY_FILES += \
+    vendor/prebuilts/etc/permissions/privapp-permissions-pixel.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-pixel.xml
+
 # Extra packages
 PRODUCT_PACKAGES += \
     PixelLauncherOverlay \
