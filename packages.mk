@@ -4,6 +4,8 @@ DEVICE_PACKAGE_OVERLAYS += vendor/prebuilts/overlay
 # Allow overlays to be excluded from enforcing RRO
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/prebuilts/overlay
 
+$(call inherit-product, vendor/gapps/common/common-vendor.mk)
+
 # Extra packages
 PRODUCT_PACKAGES += \
     PixelLauncherOverlay \
