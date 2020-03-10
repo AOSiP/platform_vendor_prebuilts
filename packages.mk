@@ -1,3 +1,5 @@
+LOCAL_DEVICE := $(lastword $(subst _, ,$(TARGET_PRODUCT)))
+
  # Prebuilts
 DEVICE_PACKAGE_OVERLAYS += vendor/prebuilts/overlay
 
@@ -22,3 +24,9 @@ PRODUCT_PRODUCT_PROPERTIES += \
     setupwizard.feature.show_pixel_tos=true \
     setupwizard.feature.baseline_setupwizard_enabled=true \
     ro.setupwizard.esim_cid_ignore=00000001 \
+
+ifneq ($(filter coral flame,$(LOCAL_DEVICE)),)
+PRODUCT_PRODUCT_PROPERTIES += \
+    setupwizard.enable_assist_gesture_training=true
+endif
+
